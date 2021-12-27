@@ -107,8 +107,7 @@ void applyVolume(pa_context* ctxt, const pa_sink_info* i, int eol, void* userdat
 }
 
 void stateCallback(pa_context* ctxt, void* userdata) {
-    switch (pa_context_get_state(ctxt))
-    {
+    switch (pa_context_get_state(ctxt)) {
         case PA_CONTEXT_READY:
             pa_context_get_sink_info_list(ctxt, applyVolume, NULL);
         case PA_CONTEXT_CONNECTING:
@@ -128,6 +127,8 @@ void stateCallback(pa_context* ctxt, void* userdata) {
 int fail(const char* msg) {
     printf(msg);
     printf("\n\nUsage: cvolctrl <volume> <togglemute>\n\nVolume is signed integer, which is added to current volume level.\nTogglemute is enabled if set to 1 and disabled if set to 0.\n\nExamples:\n cvolctrl 5 0 -> increases volume by 5\n cvolctrl -10 1 -> decreases volume by 10 and toggles mute\n");
+
+    return 0;
 }
 
 int main(int argc, const char* argv[]) {
