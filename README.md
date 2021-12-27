@@ -1,4 +1,4 @@
-# pyvolctrl
+# cvolctrl
 
 Simple volume notifier written in C
 
