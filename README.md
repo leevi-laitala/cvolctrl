@@ -25,13 +25,13 @@ Examples:
 Bind to keyboard volume buttons. In this example xbindkeys config file:
 
 ```
-"python /path/to/cvolctrl/cvolctrl 10 0"
+"/path/to/cvolctrl/cvolctrl 10 0"
    XF86AudioRaiseVolume
 
-"python /path/to/cvolctrl/cvolctrl -10 0"
+"/path/to/cvolctrl/cvolctrl -10 0"
    XF86AudioLowerVolume
 
-"python /path/to/cvolctrl/cvolctrl 0 1"
+"/path/to/cvolctrl/cvolctrl 0 1"
    XF86AudioMute
 ```
 
